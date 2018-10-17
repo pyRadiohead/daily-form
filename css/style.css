@@ -15,8 +15,8 @@ a,
 input[type="submit"],
 input[type="button"],
 button {
-
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color 0.3s ease-in, border-color 0.3s ease-in,
+		background-color 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 input[type="submit"],
@@ -39,7 +39,9 @@ button,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover,
-.ba-button:hover {}
+.ba-button:hover {
+	background: linear-gradient(45deg, #ff512f, #dd2476);
+}
 
 input[type="text"],
 input[type="email"],
@@ -48,10 +50,11 @@ input[type="number"],
 input[type="tel"],
 textarea,
 select {
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color 0.3s ease-in, border-color 0.3s ease-in,
+		background-color 0.3s ease-in, opacity 0.3s ease-in;
 	padding: 14px;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 13px;
 	border-radius: 4px;
 	background-color: #f0f0f0;
 	border: none;
@@ -67,11 +70,15 @@ select:focus {}
 
 textarea {}
 
+main {
+	padding-top: 60px;
+}
+
 .ba-registration-form {
 	max-width: 460px;
 	margin: 0 auto;
-	background: #FFF;
-	padding: 31px 65px;
+	background: #fff;
+	padding: 31px;
 	border-radius: 4px;
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -79,7 +86,7 @@ textarea {}
 .ba-registration-form__header {
 	display: flex;
 	flex-wrap: wrap;
-
+	margin-bottom: 13px;
 
 }
 
@@ -88,7 +95,6 @@ textarea {}
 	font-weight: 700;
 	margin: 0;
 	padding: 0;
-
 }
 
 .form-title:before {
@@ -99,13 +105,14 @@ textarea {}
 	background: url(../img/key_icon.png);
 	vertical-align: middle;
 	margin-right: 7px;
-
 }
 
 .information-text {
 	color: #797b7f;
 	font-size: 13px;
 	font-weight: 400;
+	line-height: 20px;
+	word-spacing: 1px;
 }
 
 .form-links {
@@ -114,7 +121,7 @@ textarea {}
 }
 
 .ba-form-row {
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 }
 
 .ba-row {
@@ -123,6 +130,28 @@ textarea {}
 	margin-left: -16px;
 }
 
-ba-row>[class*='ba-col-'] {
-	padding-left: 16px;
+.ba-registration-form__footer {
+	margin-bottom: 31px;
+}
+
+.ba-registration-form__footer>button {
+	margin-bottom: 10px;
+}
+
+input {
+	position: relative;
+}
+
+
+input[type="text"]:focus::placeholder {
+	text-indent: +50%;
+	opacity: 0.6;
+}
+
+input[type="email"]:focus::placeholder,
+input[type="password"]:focus::placeholder {
+	text-indent: +70%;
+	opacity: 0.6;
+
+
 }
